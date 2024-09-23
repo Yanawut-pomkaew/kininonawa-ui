@@ -1,0 +1,11 @@
+<div class="main-container">
+    <p class="top5">Top 5 หนังสือยอดนิยม</p>
+    <div>
+      <div class="result-books" *ngFor="let i of books">
+        <div class="card">
+          <p class="bookName">{{ i.bookName }}</p>
+          <p class="author">{{ i.author }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

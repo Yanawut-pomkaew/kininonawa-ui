@@ -1,0 +1,36 @@
+<app-header-bar></app-header-bar>
+<!-- <app-banner [books]="results"></app-banner> -->
+<!-- <hr class="main-cut-line" /> -->
+<div class="main-container">
+  <div class="bookStrct">
+    <div class="result-books" *ngFor="let i of results">
+      <div class="card">
+        <div class="bookName-section">
+          <h4>{{ i.bookName }}</h4>
+        </div>
+
+        <div class="category">
+          <span class="sub-category"> {{ i.category1 }}</span>
+          <span class="sub-category"> {{ i.category2 }}</span>
+          <span class="sub-category"> {{ i.category3 }}</span>
+        </div>
+
+        <p class="author">{{ i.author }}</p>
+        <p *ngIf="i.rentable > 0">เหลือจำนวน {{ i.rentable }} เล่ม</p>
+        <p *ngIf="i.rentable == 0">
+          <span style="color: rgb(202, 41, 41)">เหลือจำนวน 0 เล่ม</span>
+        </p>
+
+        <button class="reserve-all-book-btn"><span>จองเลย!</span></button>
+        <br>
+        <button class="delete-book-btn" (click)="deleteBook(i)"><span>ลบ</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="bookForm">
+  <p>ชื่อหนังสือ</p>
+  <input type="text" formControlName="bookName" id="bookName" name="bookName" maxlength="255"/>
+  <button (click)="onSave()">เพิ่ม</button>
+</form>

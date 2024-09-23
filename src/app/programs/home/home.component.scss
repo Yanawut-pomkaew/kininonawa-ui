@@ -1,0 +1,91 @@
+.bookStrct {
+    display : flex;
+    flex-wrap: nowrap;
+    row-gap: 1.5rem;
+    column-gap: 1.5rem;
+}
+
+
+.card {
+    padding : 20px;
+    border-radius: 4px;
+    width : 220px;
+}
+
+.category {
+    height : 50px;
+}
+
+.card > p {
+    font-size : 14px;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.sub-category {
+    margin-right : 8px;
+    font-size : 16px;
+}
+
+.sub-category:hover {
+    color : rgb(96, 137, 165);
+}
+
+.author:hover {
+    color : rgb(96, 137, 165);
+}
+
+
+.reserve-all-book-btn {
+    display : flex;
+    margin-left : auto;
+    margin-right : auto;
+    cursor: pointer;
+    border : none;
+    width : 150px;
+    border-radius: 16px;
+    padding : 10px;
+    color : white;
+    background-color: rgb(224, 176, 15);
+}
+
+.reserve-all-book-btn > span {
+    display : flex;
+    margin-left : auto;
+    margin-right : auto;
+}
+
+
+.main-container {
+    padding : 4rem;
+
+}
+
+.main-cut-line {
+    width : 94%
+}
+
+.bookName-section {
+    height : 50px;
+}
+
+.delete-book-btn {
+    display : flex;
+    margin-left : auto;
+    margin-right : auto;
+    cursor: pointer;
+    border : none;
+    width : 150px;
+    border-radius: 16px;
+    padding : 10px;
+    color : white;
+    background-color: rgb(206, 54, 16);
+}
+
+.delete-book-btn > span {
+    display : flex;
+    margin-left : auto;
+    margin-right : auto;
+}

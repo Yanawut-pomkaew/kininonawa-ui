@@ -1,0 +1,29 @@
+:host::ng-deep {
+  
+  .p-menubar {
+    padding: 0 0.8rem;
+    background-color: #4a148c;
+    opacity: 0.8;
+    border-radius: 0;
+    height: 3rem;
+    border: none;
+    .p-menuitem {
+      font-weight: bold;
+      .p-menuitem-link {
+        padding: 0.5rem 0.75rem;
+
+        .p-menuitem-text {
+          font-size: 14px;
+          color: white ;
+        }
+      }
+    }
+
+    .p-menuitem :hover {
+      background-color: #4a148c;
+      border-radius: 4px;
+      cursor : pointer;
+    }
+
+  }
+}
