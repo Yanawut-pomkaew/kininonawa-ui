@@ -49,28 +49,29 @@ export class HomeComponent {
   }
 
   onSave() {
-    let bean = {
-      ...this.bookForm?.getRawValue(),
-    };
-    this.service.addBook(bean).subscribe((res: any) => {
-      if (res) {
-        this.toastr.success('บันทึกสำเร็จ');
-      } else {
-        this.toastr.error('บันทึกไม่สำเร็จ');
-      }
-
-      this.ngOnInit();
-    });
+    if(this.bookForm?.get("bookName")?.value && this.bookForm?.get("bookName")?.value.trim() > 0) {
+      let bean = {
+        ...this.bookForm?.getRawValue(),
+      };
+      this.service.addBook(bean).subscribe((res: any) => {
+        if (res) {
+          this.toastr.success('บันทึกสำเร็จ');
+        } else {
+          this.toastr.error('บันทึกไม่สำเร็จ');
+        }
+  
+        this.ngOnInit();
+      });
+    } else {
+      this.toastr.error('เพิ่มไม่สำเร็จ เนื่องจากไม่ได้ใส่ชื่อหนังสือ');
+    }
+    
   }
 
   deleteBook(data: any) {
  
     this.service.deleteBook(data).subscribe((res: any) => {
-      if (res) {
         this.toastr.success('ลบสำเร็จ');
-      } else {
-        this.toastr.error('ลบไม่สำเร็จ');
-      }
 
       this.ngOnInit();
     });

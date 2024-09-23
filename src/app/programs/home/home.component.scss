@@ -1,6 +1,6 @@
 .bookStrct {
     display : flex;
-    flex-wrap: nowrap;
+    flex-flow: row wrap;
     row-gap: 1.5rem;
     column-gap: 1.5rem;
 }
@@ -89,3 +89,12 @@
     margin-left : auto;
     margin-right : auto;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .bookStrct {
+        justify-content: center;
+    }
+  }
+  
+  

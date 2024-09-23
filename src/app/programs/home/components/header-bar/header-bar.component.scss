@@ -1,12 +1,13 @@
 :host::ng-deep {
-  
   .p-menubar {
+    position: fixed !important;
+    min-width: 100%;
     padding: 0 0.8rem;
-    background-color: #4a148c;
+    background-color: #ffffff;
     opacity: 0.8;
+    border-bottom: 1px solid black;
     border-radius: 0;
     height: 3rem;
-    border: none;
     .p-menuitem {
       font-weight: bold;
       .p-menuitem-link {
@@ -14,13 +15,13 @@
 
         .p-menuitem-text {
           font-size: 14px;
-          color: white ;
+          color: black ;
         }
       }
     }
 
     .p-menuitem :hover {
-      background-color: #4a148c;
+      background-color: #ffffff;
       border-radius: 4px;
       cursor : pointer;
     }
